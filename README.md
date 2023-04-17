@@ -5,7 +5,7 @@ setups up development environment using ansible. installs the following software
 -ansible 
 -git 
 
-#usage 
+# usage 
 
 ```
 ansible-playbook main.yml 
