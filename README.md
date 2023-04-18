@@ -1,6 +1,7 @@
 # dev-setup
 setups up development environment using ansible. installs the following software
 - homebrew (macOS) 
+- python
 - vscode
 - ansible  
 - git
