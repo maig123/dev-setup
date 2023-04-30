@@ -1,0 +1,12 @@
+---
+- name: sets up docker and k3d on mac hosts
+  hosts: mac_hosts
+  connection: local
+  become: yes
+  tasks: 
+
+
+    - name: installs docker
+      community.general.homebrew: 
+        name: git
+        state: present 

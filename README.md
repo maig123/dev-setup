@@ -5,7 +5,7 @@ setups up development environment using ansible. installs the following software
 - vscode
 - ansible  
 - git
-- podman  
+- docker  
 
 # dev-setup k3d 
 - k3d install

@@ -5,6 +5,7 @@
   become: yes
   tasks: 
 
+
     - name: installs docker
       community.general.homebrew: 
         name: docker
@@ -17,7 +18,7 @@
         dest: /tmp/install-k3d.sh
         mode: '755'
 
-    - name: makes k3d directory
+    - name: makes directory in case its needed
       ansible.builtin.file:
         path: /usr/local/bin
         state: directory
