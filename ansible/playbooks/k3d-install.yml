@@ -1,0 +1,28 @@
+---
+- name: sets up docker and k3d on mac hosts
+  hosts: mac_hosts
+  connection: local
+  become: yes
+  tasks: 
+
+    - name: installs docker
+      community.general.homebrew: 
+        name: docker
+        state: present 
+
+
+    - name: gets k3d install script
+      ansible.builtin.get_url: 
+        url: https://raw.githubusercontent.com/k3d-io/k3d/main/install.sh
+        dest: /tmp/install-k3d.sh
+        mode: '755'
+
+    - name: makes k3d directory
+      ansible.builtin.file:
+        path: /usr/local/bin
+        state: directory
+        mode: '0755'
+
+    - name: runs k3d install script
+      ansible.builtin.shell:
+        cmd: /tmp/install-k3d.sh

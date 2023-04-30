@@ -1,4 +1,5 @@
-#script sets up the initial environments and ansible. once ansible exists ansible will setup the rest
+#script sets up the initial environments and ansible. 
+#once ansible exists ansible will setup the rest
 #usage: 
 # 1. change permissions: chmod +x main.sh 
 # 2. run script: sudo main.sh 
