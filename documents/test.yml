@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: webapp1
+  name: webapp1
+spec:
+  replicas: 10
+  selector:
+    matchLabels:
+      app: webapp1
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: webapp1
+    spec:
+      containers:
+      - image: nginx:1.16-alpine-perl
+        name: nginx
+        resources: {}
+#        envFrom:
+#        - configMapRef:
+#           name: configmaptest
+
+status: {}
