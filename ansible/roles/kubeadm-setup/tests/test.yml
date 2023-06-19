@@ -1,0 +1,6 @@
+---
+- hosts: test-vms
+  remote_user: alan
+  become: true
+  roles:
+    - ../../kubeadm-setup
